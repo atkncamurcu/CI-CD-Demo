@@ -1,0 +1,11 @@
+{
+  "name": "CI-CD-Demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/atkncamurcu/CI-CD-Demo",
+  "author": "atkncamurcu <atkncamurcu@hotmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^12.3.0"
+  }
+}
