@@ -14,7 +14,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Reclaim cache directory
-        run: chown -R 1001:1001 /github/home/.cache && echo "pwn dat cache"
+        run: chown -R 1001:1001 /root/.cache/Cypress/12.3.0/binary_state.json
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
       - name: Use Node.js 16.x
