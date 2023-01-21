@@ -10,29 +10,10 @@ jobs:
   cypress-run:
     runs-on: ubuntu-latest
     container: 
-      image: cypress/browsers:node-16.18.1-chrome-109.0.5414.74-1-ff-109.0-edge-109.0.1518.52-1
-      options: --user 1001
+      image: cypress/browsers:node12.18.3-chrome87-ff82
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Persist build cache
-        uses: actions/cache@v2
-        with:
-          path: ${{ github.workspace }}/.yarn/cache
-          # Generate a new cache whenever packages or source files change.
-          key: ${{ runner.os }}-${{ hashFiles('yarn.lock') }}
-          # If source files changed but packages didn't, rebuild from a prior cache.
-          restore-keys: |
-            ${{ runner.os }}-${{ hashFiles('yarn.lock') }}
-      - name: Reclaim cache directory
-        run: mkdir /root/.cache && chown -R 1001:1001 /root/.cache
-      # Install NPM dependencies, cache them correctly
-      # and run all Cypress tests
-      - name: Use Node.js 16.x
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16.x
-          cache: 'yarn'
       - name: Cypress run
         uses: cypress-io/github-action@v5.0.5 # use the explicit version number
         with:
