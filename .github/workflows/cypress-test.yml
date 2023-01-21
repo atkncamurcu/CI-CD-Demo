@@ -24,6 +24,8 @@ jobs:
           # If source files changed but packages didn't, rebuild from a prior cache.
           restore-keys: |
             ${{ runner.os }}-${{ hashFiles('yarn.lock') }}
+      - name: Reclaim cache directory
+        run: chown -R 1001:1001 /root/.cache
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
       - name: Use Node.js 16.x
