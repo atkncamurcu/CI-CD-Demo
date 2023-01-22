@@ -21,7 +21,7 @@ jobs:
           restoreKeys: cypress | $(Agent.OS) | package-lock.json
         displayName: Cache Cypress binary
 
-      - script: npm ci
+      - script: npm install
         displayName: 'Install NPM dependencies'
 
       - script: npm run cy:verify
