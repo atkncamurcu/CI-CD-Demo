@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "cy:verify": "cypress verify",
-    "cy:run": "cypress run",
+    "cy:run": "cypress run"
   },
   "devDependencies": {
     "cypress": "^12.3.0"
