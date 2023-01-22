@@ -6,7 +6,8 @@
   "author": "atkncamurcu <atkncamurcu@hotmail.com>",
   "license": "MIT",
   "scripts": {
-    "cy:run": "cypress run"
+    "cy:verify": "cypress verify",
+    "cy:run": "cypress run",
   },
   "devDependencies": {
     "cypress": "^12.3.0"
