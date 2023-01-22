@@ -8,9 +8,11 @@ jobs:
           versionSpec: '16.19.0'
         displayName: 'Install Node.js'
       
+      
       - task: Bash@3
         inputs:
-          script: 'apt-get install libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb'
+          targetType: inline
+          script: apt-get install libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb
 
       - task: CacheBeta@1
         inputs:
