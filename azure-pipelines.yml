@@ -24,8 +24,5 @@ jobs:
       - script: npm install
         displayName: 'Install NPM dependencies'
 
-      - script: npm run cy:verify
-        displayName: 'Cypress verify'
-
       - script: npm run cy:run
         displayName: 'Run Cypress tests'
