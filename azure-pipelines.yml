@@ -7,13 +7,6 @@ jobs:
         inputs:
           versionSpec: '16.19.0'
         displayName: 'Install Node.js'
-        
-      - task: CacheBeta@1
-        inputs:
-          key: npm | $(Agent.OS) | package-lock.json
-          path: /home/vsts/.npm
-          restoreKeys: npm | $(Agent.OS) | package-lock.json
-        displayName: Cache NPM packages
 
       - script: npm install
         displayName: 'Install NPM dependencies'
