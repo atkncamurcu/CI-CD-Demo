@@ -1,6 +1,6 @@
 jobs:
 
-  - job: Cypress E2E Test
+  - job: Cypress_E2E_Test
     pool: default
     steps:
       - task: NodeTool@0
